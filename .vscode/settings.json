@@ -1,0 +1,10 @@
+{
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.cursorWidth": 5,
+    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.scrollback": 100000,
+    "terminal.integrated.splitCwd": "workspaceRoot",
+    "task.problemMatchers.neverPrompt": null
+}

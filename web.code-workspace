@@ -1,0 +1,26 @@
+{
+    "folders": [
+        {
+            "path": "./"
+        }
+    ],
+    "[typescript]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true
+    },
+    "[markdown]": {
+        "editor.formatOnSave": true,
+        "editor.wordWrap": "on",
+        "editor.renderWhitespace": "all",
+        "editor.acceptSuggestionOnEnter": "off"
+    },
+    "breadcrumbs.enabled": true,
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.cursorWidth": 5,
+    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.scrollback": 100000,
+    "terminal.integrated.splitCwd": "workspaceRoot",
+    "task.problemMatchers.neverPrompt": null
+}
