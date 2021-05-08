@@ -7,8 +7,8 @@ export default class Home extends Component {
             <div id="home">
                 <section>
                     <img
-                        src="./../images/kiwi.jpg"
-                        alt="kiwi"
+                        src="assets/kiwi.jpg"
+                        alt="kiwi 22"
                         className="curve"
                     />
                     <h2>What are the health benefits of kiwifruit?</h2>

@@ -1,62 +1,76 @@
-const path = require('path');
-const autoprefixer = require('autoprefixer');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const autoprefixer = require("autoprefixer");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-    entry: './src/index.js',
+    entry: "./src/index.js",
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js',
-        chunkFilename: '[id].js',
-        publicPath: ''
+        path: path.resolve(__dirname, "dist"),
+        filename: "bundle.js",
+        chunkFilename: "[id].js",
+        publicPath: "",
     },
     resolve: {
-        extensions: ['.js', '.jsx']
+        extensions: [".js", ".jsx"],
     },
     module: {
         rules: [
             {
                 test: /\.js$/,
-                loader: 'babel-loader',
-                exclude: /node_modules/
+                loader: "babel-loader",
+                exclude: /node_modules/,
             },
             {
-                test: /\.css$/,
+                test: /\.scss$/,
                 exclude: /node_modules/,
                 use: [
-                    { loader: 'style-loader' },
-                    { 
-                        loader: 'css-loader',
+                    { loader: "style-loader" },
+                    {
+                        loader: "css-loader",
                         options: {
-                            modules: {
-                                localIdentName: "[name]__[local]___[hash:base64:5]",
-                            },														
-                            sourceMap: true
-                        }
+                            sourceMap: true,
+                        },
                     },
-                    { 
-                        loader: 'postcss-loader',
+                    {
+                        loader: "sass-loader",
+                        options: {
+                            sourceMap: true,
+                        },
+                    },
+                    {
+                        loader: "postcss-loader",
                         options: {
                             postcssOptions: {
-                                plugins: [
-                                    [ 'autoprefixer', {}, ],
-                                ],
+                                plugins: [["autoprefixer", {}]],
                             },
-                        }
-                    }
-                ]
+                        },
+                    },
+                ],
             },
             {
-                test: /\.(png|jpe?g|gif)$/,
-                loader: 'url-loader?limit=10000&name=img/[name].[ext]'
-            }
-        ]
+                test: /\.(png|jpg|gif)$/i,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: "[path][name].[ext]",
+                        },
+                    },
+                    {
+                        loader: "url-loader",
+                        options: {
+                            limit: 8192,
+                        },
+                    },
+                ],
+            },
+        ],
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: __dirname + '/public/index.html',
-            filename: 'index.html',
-            inject: 'body'
-        })
-    ]
+            template: __dirname + "/src/index.html",
+            filename: "index.html",
+            inject: "body",
+        }),
+    ],
 };
