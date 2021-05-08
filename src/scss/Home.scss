@@ -1,0 +1,10 @@
+#home {
+    .curve {
+        width: 25%;
+        height: auto;
+        float: left;
+        margin-right: 2rem;
+        border-radius: 50%;
+        shape-outside: circle();
+    }
+}

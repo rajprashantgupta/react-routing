@@ -7,19 +7,21 @@ import Contact from "../pages/Contact";
 
 export default function Container() {
     return (
-        <Switch>
-            <Route path="/about-us">
-                <About />
-            </Route>
-            <Route path="/services">
-                <Services />
-            </Route>
-            <Route path="/contact-us">
-                <Contact />
-            </Route>
-            <Route exact path="/">
-                <Home />
-            </Route>
-        </Switch>
+        <div id="main-container">
+            <Switch>
+                <Route path="/about-us">
+                    <About />
+                </Route>
+                <Route path="/services">
+                    <Services />
+                </Route>
+                <Route path="/contact-us">
+                    <Contact />
+                </Route>
+                <Route exact path="/">
+                    <Home />
+                </Route>
+            </Switch>
+        </div>
     );
 }
