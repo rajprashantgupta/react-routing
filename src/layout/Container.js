@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
+import { Container as MainContainer } from "react-bootstrap";
 import Home from "../pages/Home";
 import About from "../pages/About";
 import Services from "../pages/Services";
@@ -7,7 +8,7 @@ import Contact from "../pages/Contact";
 
 export default function Container() {
     return (
-        <div id="main-container">
+        <MainContainer id="main-container" fluid="md">
             <Switch>
                 <Route path="/about-us">
                     <About />
@@ -22,6 +23,6 @@ export default function Container() {
                     <Home />
                 </Route>
             </Switch>
-        </div>
+        </MainContainer>
     );
 }

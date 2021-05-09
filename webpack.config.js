@@ -18,7 +18,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 loader: "babel-loader",
-                exclude: /node_modules/,
+                exclude: path.resolve(__dirname, "node_modules"),
             },
             {
                 test: /\.scss$/,
@@ -48,7 +48,7 @@ module.exports = {
                 ],
             },
             {
-                test: /\.(png|jpg|gif)$/i,
+                test: /\.(png|jpg|jpeg|gif)$/i,
                 use: [
                     {
                         loader: "file-loader",
@@ -59,7 +59,7 @@ module.exports = {
                     {
                         loader: "url-loader",
                         options: {
-                            limit: 8192,
+                            limit: 819200,
                         },
                     },
                 ],

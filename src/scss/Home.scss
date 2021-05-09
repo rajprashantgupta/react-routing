@@ -1,10 +1,16 @@
 #home {
     .curve {
-        width: 25%;
-        height: auto;
+        width: 200px;
+        height: 200px;
         float: left;
         margin-right: 2rem;
         border-radius: 50%;
+        object-fit: cover;
+        box-shadow:
+            0px 8px 5px -5px RGBA(0, 0, 0, .6),
+            inset 3px 3px 5px 0px RGBA(0, 0, 0, .2),
+            inset -3px 3px 5px 0px RGBA(0, 0, 0, .2),
+            inset -3px -3px 5px 0px RGBA(255, 255, 255, .4);
         shape-outside: circle();
     }
 }
