@@ -5,6 +5,7 @@ import Home from "../pages/Home";
 import About from "../pages/About";
 import Services from "../pages/Services";
 import Contact from "../pages/Contact";
+import NotPage from "../pages/NotPage";
 
 export default function Container() {
     return (
@@ -21,6 +22,9 @@ export default function Container() {
                 </Route>
                 <Route exact path="/">
                     <Home />
+                </Route>
+                <Route>
+                    <NotPage />
                 </Route>
             </Switch>
         </MainContainer>

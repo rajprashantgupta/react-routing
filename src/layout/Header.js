@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Header() {
     return (
@@ -11,10 +11,18 @@ export default function Header() {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
-                    <Link to="/">Home</Link>
-                    <Link to="/about-us">About us</Link>
-                    <Link to="/services">Services</Link>
-                    <Link to="/contact-us">Contact us</Link>
+                    <NavLink exact to="/">
+                        Home
+                    </NavLink>
+                    <NavLink exact to="/about-us">
+                        About us
+                    </NavLink>
+                    <NavLink exact to="/services">
+                        Services
+                    </NavLink>
+                    <NavLink exact to="/contact-us">
+                        Contact us
+                    </NavLink>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
